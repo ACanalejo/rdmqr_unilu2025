@@ -1,0 +1,29 @@
+### Hidden files ###
+
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+### Hidden folders ###
+
+**00_textbooks/**
+**00_additional_resources/**
+**00_students/**
+**00_tutor/**
+**00_take_home_exercises/outline.docx**
+**01_session01/readings/**
+**01_session01/slides_session01_files/**
+**02_session02/readings/**
+**03_session03/readings/**
+**04_session04/readings/**
+**05_session05/readings/**
+**06_session06/readings/**
+**07_session07/readings/**
+**08_session08/readings/**
+**09_session09/readings/**
+**10_session10/readings/**
+**11_session11/readings/**
+**12_session12/readings/**
+**13_session13/readings/**
+**14_session14/readings/**
