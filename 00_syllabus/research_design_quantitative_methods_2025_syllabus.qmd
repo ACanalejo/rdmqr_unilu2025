@@ -1,22 +1,67 @@
-# Research Design and Methods in Quantitative Research (UNILU Fall 2025)
+---
+title: "Research Design and Methods in Quantitative Research"
+subtitle: "Masterseminar Fall 2025" 
+author: 
+- Room 4.B55^[***Sessions 1 and 2 (25.09.25) and 9 and 10 (20.11.25) will take palce in Room 4.B51.***]
+- Thursdays 14:15-18:00^[Every two Thursdays.]
+thanks: "This version of the syllabus: `r format(Sys.time(), '%d %b %Y')`" 
 
+csl: ../00_bibliography/apa.csl
+link-citations: true
+linkcolor: blue
+fontsize: 12pt
+number-sections: true
+format: 
+  pdf:
+    include-in-header: 
+      text: |
+          % LATEX PACKAGES
+          \usepackage[T1]{fontenc} % Use the T1 font encoding
+          \usepackage{fontspec} % Allow to modify font
+          \usepackage{setspace}\onehalfspacing    % Line spacing control
+          \usepackage[utf8]{inputenc}  % UTF-8 input encoding
+          \usepackage{dcolumn}     % Align on decimal points in  tables
+          \usepackage{booktabs}   % Professional tables
+          \usepackage{longtable}     % Tables spanning multiple pages
+          \usepackage{array}     % Enhanced array and table tools
+          \usepackage{multirow}  % Cells spanning multiple rows in  tables
+          \usepackage{wrapfig}   % Wrap text around figures
+          \usepackage{float}     % Improved float control
+          \usepackage{colortbl}  % Color for tables
+          \usepackage{pdflscape} % Landscape-oriented pages
+          \usepackage{tabu}    % Flexible table environment
+          \usepackage{threeparttable}  % Tables with notes
+          \usepackage{threeparttablex} % "threeparttable" with  "longtable" support
+          \usepackage[normalem]{ulem}  % Various underlining styles
+          \usepackage{makecell}         % Enhanced table cell creation
+          \usepackage{xcolor}  % Advanced color support
+          \usepackage{fancyhdr}    % Custom headers and footers
+          
+          % LATEX SETUP
+          \pagestyle{fancy}  % Use the fancy header/footer style
+          \fancypagestyle{plain}{\pagestyle{fancy}} % Fancy style for plain pages
+          \fancyhead[LE,RO]{Dr. Álvaro Canalejo-Molero}
+          \fancyhead[RE,LO]{University of Lucerne}
 
-This is the repository for the master seminar Research Design and Methods in Quantitative Research, taught by the lecturer Dr. Álvaro Canalejo-Molero at the University of Lucerne, during the fall term 2025.
- 
+---
 
-## Course description
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Course description
 
 Social science is increasingly adopting quantitative research tools, such as experimental, statistical and machine learning methods. Students without a strong mathematical background often struggle to keep up with these developments. Motivated by these facts, this seminar introduces students to quantitative social research with an intuition-based approach. The goal is twofold: first, to provide students with the basic toolset to elaborate the research designs that better fit their needs, and second, to enable them to gain a deeper understanding of specific methods autonomously by making quantitative research accessible. To meet these goals, the seminar will first delineate the fundamental elements of scientific inquiry in the social sciences. With a clear understanding of these elements, the students will be guided through the essential social science approaches for the analysis of quantitative data. Finally, the seminar will also train students to deal with applied quantitative research by providing basic statistical skills, such as producing descriptive statistics, reading regression tables, interpreting statistical tests, and converting hypotheses into an appropriate regression model. Students will learn to identify their research goals and elaborate a theory-driven research design. Students are encouraged to think critically to detect and understand the strengths and limitations of specific quantitative analyses.
 
-## Seminar requirements
+# Seminar requirements
 
 This introductory seminar does not require prior knowledge of statistics, though high-school level of mathematical concepts (like the mean of a variable or the idea of a function) will be assumed. The seminar is suitable for students with a qualitative background who want to start learning about quantitative research, as well as for those with some experience in quantitative methods who seek a deeper understanding. Experience in R programming is not required, but is an asset.
 
-## Course organization
+# Course organization
 
 The course is organized as a bi-weekly seminar that will run during the Fall term of 2025. There will be two sessions every two Thursdays from 14:15 to 18:00, starting on September 25th. Each session will start with a student presentation of (one of) the applied readings. Then, we will delve into the session topic by discussing doubts about the basic readings and expanding on them. To help the discussion, students will be asked to answer a number of questions related to the topic of the weeks *(topic questions)* that must be uploaded to OLAT before each session. Finally, during the second half of the course, students will have to complete three take-home exercises to apply statistical analyses to real-world data.
 
-## Learning outcomes
+# Learning outcomes
 
 By the end of this course, students will be able to:
 
@@ -30,7 +75,7 @@ By the end of this course, students will be able to:
 
 5. **[Competence — statistical analysis]** perform simple descriptive and inferential statistical analyses.
 
-## Textbooks
+# Textbooks
 
 Each session will be accompanied by a set of basic and applied readings. Basic readings typically include an introductory text that covers the fundamental concepts related to the session topic. Applied readings usually consist of scientific articles that apply the session's topic or delve deeper into specific areas of interest. Students are encouraged to thoroughly study the basic readings and engage with the applied articles, focusing on understanding the main arguments or points presented. 
 
@@ -56,41 +101,41 @@ Additionally, here are some references that students may find useful to improve 
 
 For the specific readings, see the section *Course schedule* below.
 
-## Teaching policy
+# Teaching policy
 
 This course is designed as a seminar rather than a traditional lecture. Students are expected to prepare the applied readings in advance. While the lecturer will facilitate the discussion, each session will follow a bottom-up approach, where students are encouraged to raise questions and engage in debates after the presentation. Therefore, active participation from everyone is essential to the success of the class.
 
-## Integration and interaction policy
+# Integration and interaction policy
 
 Discrimination due to race, gender, ethnicity, or sexual orientation is strictly forbidden in this course. Students are encouraged to use inclusive language and to respect the sexual and gender identification of others. During each session, the lecturer will actively promote equal participation within the class. More generally, interventions must be carried out respectfully, integrating and engaging with different views and perspectives. Discouraging language or other bullying strategies are strictly forbidden, too.
 
-## Artificial intelligence (AI) policy
+# Artificial intelligence (AI) policy
 
 The use of ChatGPT and other generative AI tools for preparing class materials is allowed. However, these tools should augment, not replace, human effort (e.g., students should not copy and paste content directly from these tools). The primary concern is not grades but the quality of class discussions, which are central to evaluation. Relying on AI to substitute for human work will hinder meaningful discussion and, ultimately, not only the grade but the learning outcomes. 
 
 To help enforcing this policy, students are required to declare the use of AI and specify its scope in an appendix when submitting presentation slides, take-home exercises, and answers to the topic questions.
 
-## Evaluation
+# Evaluation
 
-### Mandatory requirements (4 credits)
+## Mandatory requirements (4 credits) {.unnumbered}
 
 To receive the credits, students are expected to fulfill the following criteria:
 
-#### 1. Attend all the sessions
+### 1. Attend all the sessions {.unnumbered}
 
 Attendance is mandatory. Students can miss a maximum of two sessions. Missing more sessions without a justified certificate of absence implies failing the course.
 
-#### 2. Study the basic reading(s) before each session
+### 2. Study the basic reading(s) before each session {.unnumbered}
 
 *Studying = reading + critical thinking*. 
 
 Students can find the texts in the materials folder in OLAT.
 
-#### 3. Participate actively 
+### 3. Participate actively {.unnumbered}
 
 Active engagement involves intervening during the discussion with questions, comments and ideas, reflecting on the content of the readings. Students are always encouraged to raise original arguments and debates.
 
-#### 4. Answer the topic questions of each session
+### 4. Answer the topic questions of each session {.unnumbered}
 
 The lecturer will upload a series of questions before each session about the topic of the week. Sometimes, these questions will be related to the basic reading(s). Students are expected to answer to these questions briefly (one paragraph per question is enough) before each class. Completing these questions is mandatory to pass the course, however, the answers to the questions will not be graded. The idea is to encourage critical thinking when preparing the readings and prepare material to discuss during class.
 
@@ -102,7 +147,7 @@ The **submission rules** are:
 
 - The file must be in Word. The title must always follow the structure *topic_questions_sessionXX_YOURSURNAME*.
 
-#### 5. Present the applied reading of (at least) one of the sessions
+### 5. Present the applied reading of (at least) one of the sessions {.unnumbered}
 
 Presentations will be conducted individually or in pairs and will last a maximum of **25 minutes**. They will focus on the applied reading of the day, which includes a research design related to the topic.  
 
@@ -131,7 +176,7 @@ Some additional information:
   *presentation_slides_sessionXX_YOURSURNAME(S)*  
   (e.g., *presentation_slides_session02_CANALEJO*).  
 
-#### 6. Complete three take-home exercises
+### 6. Complete three take-home exercises {.unnumbered}
 
 The exercises will take place in the second half of the course. They will gradually build upon each other and involve solving a series of tasks with R and RStudio. Students are expected to learn R and RStudio autonomously. However, the lecturer will provide the necessary materials to make this possible and will be available to clarify doubts.  
 
@@ -148,7 +193,7 @@ The name of the file must always follow the structure:
 
 *take-home_exercise_X_YOURSURNAME(S)*
 
-#### Grading policy 
+### Grading policy {.unnumbered}
 
 - 10% of the grade is determined by submitting the answers to the reading questions.
 
@@ -160,8 +205,35 @@ The name of the file must always follow the structure:
 
 The grade will not only take differences between students into account but also within students' differences over time (i.e., their personal progress).
 
+```{r echo=FALSE, fig.width=6, fig.height=3, fig.align = "center"}
+# Load necessary library
+library(ggplot2)
 
-### Masterseminar paper (6 credits)
+# Data for grading policy
+grades <- data.frame(
+  Category = c("Reading Questions", "Class Participation", "Take-home Exercises", "Presentation"),
+  Percentage = c(10, 20, 30, 40)
+)
+
+# Reorder the levels of Category based on Percentage from higher to lower
+grades$Category <- factor(grades$Category, levels = grades$Category[order(-grades$Percentage)])
+
+# Create a bar chart
+ggplot(grades, aes(x = reorder(Category, -Percentage), y = Percentage, fill = Category)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = paste0(Percentage, "%")), vjust = -0.5) +  # Add percentage labels
+  theme_minimal() +
+  labs(title = "Grading Policy Breakdown", x = "Category", y = "Percentage") +  # Remove x-axis label
+  scale_fill_brewer(palette = "Set2") +
+  ylim(0,50) +
+  theme(legend.position = "right",  # Add legend for categories
+        legend.title = element_blank(),  # Remove legend title
+        axis.text.x = element_blank(),  # Remove x-axis text
+        plot.title = element_text(hjust = 0.5))  # Center title
+```
+
+
+## Masterseminar paper (6 credits) {.unnumbered}
 
 Students can choose to write a master seminar paper to obtain six extra credits. The seminar paper must have between 7000 and 9000 words. The topic should be agreed upon between the instructor and the student. To this end, students are asked to write a paper outline of 1-2 pages consisting of the following elements:
 
@@ -181,27 +253,27 @@ An approximate deadline for the submission of the seminar paper is **April 1st 2
 
 Please refer to the [Guidelines on How to Do Research of the Department of Political Science](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.unilu.ch/fileadmin/fakultaeten/ksf/institute/polsem/Dok/Studium/Guidelines_POLSEM___2023___English_01.pdf) for more details.
 
-## Office hours
+# Office hours
 
 The lecturer has not fixed office hours. Instead, students can send an e-mail at [alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch) to schedule a meeting within a one-week time period, either in person (office 3.B14) or virtually via Zoom.
 
 
-## How to Make a Good Presentation (Checklist)
+# How to Make a Good Presentation (Checklist)
 
-### Part I – Summary and Critique (~10 min)
+## Part I – Summary and Critique (~10 min) {.unnumbered}
 
 - **Core ideas (1–2 slides, ~3 min):** Summarize the argument and main takeaways.  
 - **Research design (~4 min):** Present the research question, hypotheses, method, data type, unit of analysis, and key findings.  
 - **Critique (~3 min):** Identify strengths and main limitations of the research design (measures, validity, scope, etc.). Use clear communication: diagrams, step-by-step reasoning, examples, visual aids.  
 
-### Part II – Proposal (~15 min)
+## Part II – Proposal (~15 min) {.unnumbered}
 
 - **Address one main limitation:** Focus on *one key issue* and justify why it matters.  
 - **Propose one solution or extension:** Suggest a feasible new design, replication, different data, or alternative method.  
 - **Be realistic:** Assume research funds are available, but do not “change the world” (e.g., deciding election dates).  
 - **Seek guidance if needed:** Contact the lecturer if unsure about preparation.  
 
-### Additional Information
+## Additional Information {.unnumbered}
 
 - **Evaluation criteria:** Clarity, understanding, critique quality, reasoning, feasibility, and ability to engage discussion.  
 - **Avoid pitfalls:**  
@@ -211,15 +283,15 @@ The lecturer has not fixed office hours. Instead, students can send an e-mail at
   - Prepare early, rehearse, and refine slides.  
   - Practice in front of a friend and ask for feedback.  
 
-## Course schedule
+# Course schedule
 
-#### Session 1. Introduction (25.09.25 / 14:15–16:00)
+### Session 1. Introduction (25.09.25 / 14:15–16:00) {.unnumbered}
 
 Basic reading:
 
 - Schwartz, M. A. (2008). The importance of stupidity in scientific research. *Journal of Cell Science*, 121(11), 1771-1771.
 
-#### Session 2. The logic of scientific research (25.09.25 / 16:15–18:00)
+### Session 2. The logic of scientific research (25.09.25 / 16:15–18:00) {.unnumbered}
 
 Basic reading:
 
@@ -235,7 +307,7 @@ Applied reading:
 
 - Canalejo-Molero, Á., & Le Corre Juratic, M. (2025). Blinded by Out-group Hatred. Why does Radical Party Entry Reduce its Voters’ Satisfaction with Democracy?. *Working paper*
 
-#### Session 3. Theory and research design  (09.10.25 / 14:15–16:00) 
+### Session 3. Theory and research design  (09.10.25 / 14:15–16:00) {.unnumbered}
 
 *"All models are wrong, but some are useful"* (George E. P. Box)
 
@@ -247,7 +319,7 @@ Applied reading:
 
 - Turnbull-Dugarte, S. J., & Wagner, M. (2025). Heroes and villains: motivated projection of political identities. *Political Science Research and Methods*, 1-21.
 
-#### Session 4. Data and measurement (09.10.25 / 16:15–18:00) 
+### Session 4. Data and measurement (09.10.25 / 16:15–18:00) {.unnumbered}
 
 Basic reading:
 
@@ -261,7 +333,7 @@ Applied readings:
 
 - Knutsen, C. H., Marquardt, K. L., Seim, B., Coppedge, M., Edgell, A. B., Medzihorsky, J., ... & Lindberg, S. I. (2024). Conceptual and measurement issues in assessing democratic backsliding. *PS: Political Science & Politics*, 57(2), 162-177.
 
-#### Session 5. Descriptive inference (23.10.25 / 14:15–16:00) 
+### Session 5. Descriptive inference (23.10.25 / 14:15–16:00) {.unnumbered}
 
 Basic reading:
 
@@ -279,7 +351,7 @@ Applied reading:
 
 - Turnbull-Dugarte, S. J. (2025). Public support for the cordon sanitaire: Descriptive evidence from Spain. *Party Politics*, 31(4), 761-769.
 
-#### Session 6. Causal inference (23.10.25 / 14:15–16:00) 
+### Session 6. Causal inference (23.10.25 / 14:15–16:00) {.unnumbered}
 
 Basic readings:
 
@@ -293,7 +365,7 @@ Applied reading:
 
 - Marble, W., Mousa, S., & Siegel, A. A. (2021). Can exposure to celebrities reduce prejudice? The effect of Mohamed Salah on Islamophobic behaviors and attitudes. *American Political Science Review*, 115(4), 1111-1128.
 
-#### Session 7. Predictive inference (06.11.25 / 16:15–18:00) 
+### Session 7. Predictive inference (06.11.25 / 16:15–18:00) {.unnumbered}
 
 *Publication of* ***take-home exercise I*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***14.11.25*** *.*
 
@@ -309,7 +381,7 @@ Applied reading:
 
 - Hewitt, L., Ashokkumar, A., Ghezae, I., & Willer, R. (2024). Predicting results of social science experiments using large language models. *Working paper*
 
-#### Session 8. Experimental studies (06.11.25 / 16:15–18:00) 
+### Session 8. Experimental studies (06.11.25 / 16:15–18:00) {.unnumbered}
 
 Basic reading:
 
@@ -323,7 +395,7 @@ Applied readings:
 
 - Haas, V. I., Wappenhans, T., Geißler, F., Hartmann, F., Bischof, D., Giesecke, J., ... & Stoetzer, L. F. (2024). Does Protest Affect Bystanders? Field Experimental Evidence from Germany. *Working paper*
 
-#### Session 9. Large-N observational studies (20.11.25 / 14:15–16:00) 
+### Session 9. Large-N observational studies (20.11.25 / 14:15–16:00) {.unnumbered}
 
 *Publication of* ***take-home exercise II*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***28.11.25*** *.*
 
@@ -341,7 +413,7 @@ Applied reading:
 - Ziblatt, D., Hilbig, H., & Bischof, D. (2024). Wealth of tongues: Why peripheral regions vote for the radical right in germany. *American Political Science Review*, 118(3), 1480-1496.
 
 
-#### Session 10. Small-N observational studies (20.11.25 / 16:15–18:00) 
+### Session 10. Small-N observational studies (20.11.25 / 16:15–18:00) {.unnumbered}
 
 Basic reading:
 
@@ -361,7 +433,7 @@ Applied reading:
 
 - Thelen, K. (2018). Regulating Uber: The politics of the platform economy in Europe and the United States. *Perspectives on politics*, 16(4), 938-953.
 
-#### Session 11. Statistical testing (04.12.25 / 14:15–16:00) 
+### Session 11. Statistical testing (04.12.25 / 14:15–16:00) {.unnumbered}
 
 *Publication of* ***take-home exercise III*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***12.12.25*** *.*
 
@@ -379,7 +451,7 @@ Applied reading:
 
 - Cremaschi, S., Bariletto, N., & De Vries, C. E. (2025). Without roots: The political consequences of collective economic shocks. *American Political Science Review*, 1-20.
 
-#### Session 12. Introduction to regression I (04.12.25 / 16:15–18:00) 
+### Session 12. Introduction to regression I (04.12.25 / 16:15–18:00) {.unnumbered}
 
 Basic reading:
 
@@ -392,7 +464,7 @@ Applied reading:
 - Nalewajko, K. (2024). Allies of the Weak: La Résistance and Jews in the Holocaust. *American Political Science Review*, 1-21.
 
 
-#### Session 13. Introduction to regression II (18.12.25 / 14:15–16:00) 
+### Session 13. Introduction to regression II (18.12.25 / 14:15–16:00) {.unnumbered}
 
 Basic reading:
 
@@ -408,7 +480,7 @@ Applied reading:
 
 - Pulejo, M., & Querubín, P. (2023). Plata y plomo: How higher wages expose politicians to criminal violence (No. w31586). *National Bureau of Economic Research*.
 
-#### Session 14. Conclusion  (18.12.25 / 16:15–18:00) 
+### Session 14. Conclusion  (18.12.25 / 16:15–18:00) {.unnumbered}
 
 Basic reading:
 
