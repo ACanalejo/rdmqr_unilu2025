@@ -251,13 +251,9 @@ Basic reading:
 
 - KW: pp. 104-124, Chapter 5. Measuring Concepts of Interest
 
-Applied readings:
-
-*The two readings must be prepared together*
+Applied reading:
 
 - Little, A. T., & Meng, A. (2023). Measuring democratic backsliding. *PS: Political Science & Politics*, 1-13.
-
-- Knutsen, C. H., Marquardt, K. L., Seim, B., Coppedge, M., Edgell, A. B., Medzihorsky, J., ... & Lindberg, S. I. (2024). Conceptual and measurement issues in assessing democratic backsliding. *PS: Political Science & Politics*, 57(2), 162-177.
 
 #### Session 5. Descriptive inference (23.10.25 / 14:15–16:00) 
 
@@ -275,7 +271,7 @@ Additional readings:
 
 Applied reading:
 
-- Turnbull-Dugarte, S. J. (2025). Public support for the cordon sanitaire: Descriptive evidence from Spain. *Party Politics*, 31(4), 761-769.
+- Barnes, M. J., & Karim, S. M. (2025). The Manosphere and politics. *Comparative Political Studies*, 00104140241312095.
 
 #### Session 6. Causal inference (23.10.25 / 14:15–16:00) 
 
@@ -299,13 +295,17 @@ Basic reading:
 
 - Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science*, 24(1), 395-419.
 
-Additional reading:
+Additional readings:
+
+- Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., ... & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature*, 595(7866), 181-188.
+Applied reading:
 
 - Grimmer, J., Knox, D., & Westwood, S. (2024). Assessing the Reliability of Probabilistic US Presidential Election Forecasts May Take Decades. *Working Paper*.
 
 Applied reading:
 
 - Hewitt, L., Ashokkumar, A., Ghezae, I., & Willer, R. (2024). Predicting results of social science experiments using large language models. *Working paper*
+
 
 #### Session 8. Experimental studies (06.11.25 / 16:15–18:00) 
 
