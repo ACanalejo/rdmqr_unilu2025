@@ -11,11 +11,9 @@ Social science is increasingly adopting quantitative research tools, such as exp
 ## Seminar requirements
 
 This introductory seminar does not require prior knowledge of statistics, though high-school level of mathematical concepts (like the mean of a variable or the idea of a function) will be assumed. The seminar is suitable for students with a qualitative background who want to start learning about quantitative research, as well as for those with some experience in quantitative methods who seek a deeper understanding. Experience in R programming is not required, but is an asset.
-
 ## Course organization
 
-The course is organized as a bi-weekly seminar that will run during the Fall term of 2025. There will be two sessions every two Thursdays from 14:15 to 18:00, starting on September 25th. Each session will start with a student presentation of (one of) the applied readings. Then, we will delve into the session topic by discussing doubts about the basic readings and expanding on them. To help the discussion, students will be asked to answer a number of questions related to the topic of the week *(seminar questions)* that must be uploaded to OLAT before each session. Finally, during the second half of the course, students will have to complete three take-home exercises to apply statistical analyses to real-world data.
-
+The course is organized as a bi-weekly seminar during the Fall term of 2025. It will run every two Thursdays from 14:15 to 18:00, starting on September 25th. Each session is divided into two parts. In the first part, the lecturer will introduce the topic, after which we will discuss the basic reading(s) and expand on them. To support the discussion, students will answer a set of *seminar questions* related to the topic of the week, which must be uploaded to OLAT before each session. In the second part, one or more students will present an applied reading along with a short research proposal to complement it. Finally, during the second half of the course, students will complete three take-home exercises to apply and/or comment on statistical analyses of real-world data.
 ## Learning outcomes
 
 By the end of this course, students will be able to:
@@ -225,7 +223,7 @@ Basic reading:
 
 - KKV: pp. 3-33, Chapter 1. The Science in Social Science
 
-Additional reading:
+Additional readings:
 
 - BCH: [Chapter 1. What is a research design?](https://book.declaredesign.org/introduction/what-is-a-research-design.html) & [Chapter 2. Research design principles](https://book.declaredesign.org/introduction/research-design-principles.html)
 
@@ -233,7 +231,7 @@ Applied reading:
 
 *Presentation by the lecturer.*
 
-- Canalejo-Molero, Á., & Le Corre Juratic, M. (2025). Blinded by Out-group Hatred. Why does Radical Party Entry Reduce its Voters’ Satisfaction with Democracy?. *Working paper*
+- Canalejo-Molero, Á., & Le Corre Juratic, M. (2025). Blinded by Out-group Hatred. Why does Radical Party Entry Reduce its Voters’ Satisfaction with Democracy? *Working paper*
 
 #### Session 3. Theory and research design  (09.10.25 / 14:15–16:00) 
 
@@ -338,7 +336,7 @@ flavors)
 
 Applied reading:
 
-- Ziblatt, D., Hilbig, H., & Bischof, D. (2024). Wealth of tongues: Why peripheral regions vote for the radical right in germany. *American Political Science Review*, 118(3), 1480-1496.
+- Ziblatt, D., Hilbig, H., & Bischof, D. (2024). Wealth of tongues: Why peripheral regions vote for the radical right in Germany. *American Political Science Review*, 118(3), 1480-1496.
 
 
 #### Session 10. Small-N observational studies (20.11.25 / 16:15–18:00) 
