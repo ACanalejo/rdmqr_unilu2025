@@ -59,7 +59,7 @@ This introductory seminar does not require prior knowledge of statistics, though
 
 # Course organization
 
-The course is organized as a bi-weekly seminar that will run during the Fall term of 2025. There will be two sessions every two Thursdays from 14:15 to 18:00, starting on September 25th. Each session will start with a student presentation of (one of) the applied readings. Then, we will delve into the session topic by discussing doubts about the basic readings and expanding on them. To help the discussion, students will be asked to answer a number of questions related to the topic of the weeks *(topic questions)* that must be uploaded to OLAT before each session. Finally, during the second half of the course, students will have to complete three take-home exercises to apply statistical analyses to real-world data.
+The course is organized as a bi-weekly seminar that will run during the Fall term of 2025. There will be two sessions every two Thursdays from 14:15 to 18:00, starting on September 25th. Each session will start with a student presentation of (one of) the applied readings. Then, we will delve into the session topic by discussing doubts about the basic readings and expanding on them. To help the discussion, students will be asked to answer a number of questions related to the topic of the week *(seminar questions)* that must be uploaded to OLAT before each session. Finally, during the second half of the course, students will have to complete three take-home exercises to apply statistical analyses to real-world data.
 
 # Learning outcomes
 
@@ -113,7 +113,7 @@ Discrimination due to race, gender, ethnicity, or sexual orientation is strictly
 
 The use of ChatGPT and other generative AI tools for preparing class materials is allowed. However, these tools should augment, not replace, human effort (e.g., students should not copy and paste content directly from these tools). The primary concern is not grades but the quality of class discussions, which are central to evaluation. Relying on AI to substitute for human work will hinder meaningful discussion and, ultimately, not only the grade but the learning outcomes. 
 
-To help enforcing this policy, students are required to declare the use of AI and specify its scope in an appendix when submitting presentation slides, take-home exercises, and answers to the topic questions.
+To help enforcing this policy, students are required to declare the use of AI and specify its scope in an appendix when submitting presentation slides, take-home exercises, and answers to the seminar questions.
 
 # Evaluation
 
@@ -135,17 +135,17 @@ Students can find the texts in the materials folder in OLAT.
 
 Active engagement involves intervening during the discussion with questions, comments and ideas, reflecting on the content of the readings. Students are always encouraged to raise original arguments and debates.
 
-### 4. Answer the topic questions of each session {.unnumbered}
+### 4. Answer the seminar questions of each session {.unnumbered}
 
 The lecturer will upload a series of questions before each session about the topic of the week. Sometimes, these questions will be related to the basic reading(s). Students are expected to answer to these questions briefly (one paragraph per question is enough) before each class. Completing these questions is mandatory to pass the course, however, the answers to the questions will not be graded. The idea is to encourage critical thinking when preparing the readings and prepare material to discuss during class.
 
 The **submission rules** are:
 
-- Students must upload their responses to the *Students responses/Topic questions* folder within the specific session folder (e.g., *02_session*) in OLAT. 
+- Students must upload their responses to the *Students responses/Seminar questions* folder within the specific session folder (e.g., *02_session*) in OLAT. 
 
 - The deadline for submitting the responses is the day before the corresponding session, that is, the **previous Wednesday at noon (12:00)**. 
 
-- The file must be in Word. The title must always follow the structure *topic_questions_sessionXX_YOURSURNAME*.
+- The file must be in Word. The title must always follow the structure *seminar_questions_sessionXX_YOURSURNAME*.
 
 ### 5. Present the applied reading of (at least) one of the sessions {.unnumbered}
 
@@ -195,7 +195,7 @@ The name of the file must always follow the structure:
 
 ### Grading policy {.unnumbered}
 
-- 10% of the grade is determined by submitting the answers to the reading questions.
+- 10% of the grade is determined by submitting the answers to the seminar questions.
 
 - 20% of the grade is determined by the quality and quantity of the participation in class.
 
@@ -211,7 +211,7 @@ library(ggplot2)
 
 # Data for grading policy
 grades <- data.frame(
-  Category = c("Reading Questions", "Class Participation", "Take-home Exercises", "Presentation"),
+  Category = c("Seminar Questions", "Class Participation", "Take-home Exercises", "Presentation"),
   Percentage = c(10, 20, 30, 40)
 )
 
