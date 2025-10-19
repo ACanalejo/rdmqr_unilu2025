@@ -289,7 +289,7 @@ Applied reading:
 
 #### Session 7. Predictive inference (06.11.25 / 16:15–18:00) 
 
-*Publication of* ***take-home exercise I*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***14.11.25*** *.*
+*Publication of* ***take-home exercise I*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***20.11.25*** *.*
 
 Basic reading:
 
@@ -323,7 +323,7 @@ Applied reading:
 
 #### Session 9. Large-N observational studies (20.11.25 / 14:15–16:00) 
 
-*Publication of* ***take-home exercise II*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***28.11.25*** *.*
+*Publication of* ***take-home exercise II*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***04.12.25*** *.*
 
 Basic reading:
 
@@ -361,7 +361,7 @@ Applied reading:
 
 #### Session 11. Statistical testing (04.12.25 / 14:15–16:00) 
 
-*Publication of* ***take-home exercise III*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***12.12.25*** *.*
+*Publication of* ***take-home exercise III*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***18.12.25*** *.*
 
 Basic reading:
 
