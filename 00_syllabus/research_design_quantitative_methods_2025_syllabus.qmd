@@ -373,8 +373,6 @@ Basic readings:
 
 Additional readings:
 
-- BF: pp. 74-93, Chapter 5. Regression for Describing and Forecasting
-
 - Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science*, 24(1), 395-419.
 
 Applied reading:

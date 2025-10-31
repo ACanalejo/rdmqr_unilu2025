@@ -296,9 +296,8 @@ Basic readings:
 - Kleinberg, J., Ludwig, J., Mullainathan, S., & Obermeyer, Z. (2015). *Prediction policy problems.* American Economic Review, 105(5), 491-495.
 
 - Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., ... & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature*, 595(7866), 181-188. ***Focus on pages 181 to 184***
-Additional readings:
 
-- BF: pp. 74-93, Chapter 5. Regression for Describing and Forecasting
+Additional readings:
 
 - Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science*, 24(1), 395-419.
 
