@@ -369,7 +369,7 @@ Basic readings:
 
 - Kleinberg, J., Ludwig, J., Mullainathan, S., & Obermeyer, Z. (2015). *Prediction policy problems.* American Economic Review, 105(5), 491-495.
 
-- Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., ... & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature*, 595(7866), 181-188.
+- Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., ... & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature*, 595(7866), 181-188. ***Focus on pages 181 to 184***
 
 Additional readings:
 
