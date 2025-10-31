@@ -291,21 +291,21 @@ Applied reading:
 
 *Publication of* ***take-home exercise I*** *in OLAT. The* ***deadline*** *for delivery is in two weeks:* ***20.11.25*** *.*
 
-Basic reading:
+Basic readings:
 
-- Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science*, 24(1), 395-419.
+- Kleinberg, J., Ludwig, J., Mullainathan, S., & Obermeyer, Z. (2015). *Prediction policy problems.* American Economic Review, 105(5), 491-495.
+
+- Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., ... & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature*, 595(7866), 181-188.
 
 Additional readings:
 
-- Hofman, J. M., Watts, D. J., Athey, S., Garip, F., Griffiths, T. L., Kleinberg, J., ... & Yarkoni, T. (2021). Integrating explanation and prediction in computational social science. *Nature*, 595(7866), 181-188.
-Applied reading:
+- BF: pp. 74-93, Chapter 5. Regression for Describing and Forecasting
 
-- Grimmer, J., Knox, D., & Westwood, S. (2024). Assessing the Reliability of Probabilistic US Presidential Election Forecasts May Take Decades. *Working Paper*.
+- Grimmer, J., Roberts, M. E., & Stewart, B. M. (2021). Machine learning for social science: An agnostic approach. *Annual Review of Political Science*, 24(1), 395-419.
 
 Applied reading:
 
 - Hewitt, L., Ashokkumar, A., Ghezae, I., & Willer, R. (2024). Predicting results of social science experiments using large language models. *Working paper*
-
 
 #### Session 8. Experimental studies (06.11.25 / 16:15–18:00) 
 
