@@ -332,6 +332,8 @@ Additional reading:
 - KW: pp. 92-99. Chapter 4. Research Design, Section 4.3. Observational Studies (in two
 flavors)
 
+- Cinelli, C., Forney, A., & Pearl, J. (2024). A crash course in good and bad controls. *Sociological Methods & Research*, 53(3), 1071-1104.
+
 Applied reading:
 
 - Ziblatt, D., Hilbig, H., & Bischof, D. (2024). Wealth of tongues: Why peripheral regions vote for the radical right in Germany. *American Political Science Review*, 118(3), 1480-1496.
@@ -409,7 +411,3 @@ Applied reading:
 Basic reading:
 
 - Huntington‐Klein, N., Arenas, A., Beam, E., Bertoni, M., Bloem, J. R., Burli, P., ... & Stopnitzky, Y. (2021). The influence of hidden researcher decisions in applied microeconomics. *Economic Inquiry*, 59(3), 944-960.
-
-Additional reading:
-
-- Cinelli, C., Forney, A., & Pearl, J. (2024). A crash course in good and bad controls. *Sociological Methods & Research*, 53(3), 1071-1104.
