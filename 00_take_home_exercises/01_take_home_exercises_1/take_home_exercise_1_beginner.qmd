@@ -1,0 +1,96 @@
+---
+title: "Exploring the Replication Files of an Experimental Study (THE I - Beginner)"
+subtitle: "Research Design and Methods in Quantitative Research"
+author: "Álvaro Canalejo-Molero"
+date:  "`r format(as.Date('2025-11-06'), '%d %b %Y')`"
+output: 
+  pdf_document:
+    keep_tex: false
+format:
+  pdf:
+    toc: false
+    toc-depth: 2
+execute:
+  echo: true       # Show all code
+  warning: false   # Suppress warnings
+---
+
+# Instructions
+
+Please read and follow the guidelines below carefully. Then, complete the exercises and report the results in a Quarto document. Compile the Quarto document in PDF and submit both the compiled PDF and `.qmd` files within the deadline. 
+
+Further instructions about the submission are [below](#submission).
+
+## Preparation step 1: Install R and RStudio
+
+To complete this exercise, you will need **R** and **RStudio**. If you don't have them installed already, download and install them from:
+
+- [R](https://cran.r-project.org/)
+
+- [RStudio](https://posit.co/download/rstudio-desktop/)
+
+A tutorial on how to start using R and R Studio is [here](https://hbctraining.github.io/Intro-to-R-flipped/lessons/01_introR-R-and-RStudio.html). Please **contact the lecturer** and collaborate with your classmates if you have any doubts or need help.
+
+## Preparation step 2: Prepare a Quarto Document
+
+Open RStudio, create a new Quarto document (`.qmd`), and set the output format to PDF. Make sure your Quarto installation is up-to-date:
+
+```{r}
+
+# Install Quarto if needed
+## Run this line in a separate script or the Quarto document will not compile
+# install.packages("quarto")
+
+```
+
+You can find help on how to set up a Quarto document [here](https://quarto.org/docs/get-started/hello/rstudio.html).
+
+## Preparation step 3: Read the Assigned Paper and Download the Replication Files
+
+You will need to read the paper [*Instrumentally Inclusive: The Political Psychology of Homonationalism*](https://www.cambridge.org/core/journals/american-political-science-review/article/instrumentally-inclusive-the-political-psychology-of-homonationalism/1D9425F6FA20F34B0918018275A507A8), which you can find in the exercise materials folder.
+
+After reading the paper, download the Study 1 replication materials, also provided in the materials folder:
+
+- Data file: `study1_data.csv`  
+- R script: `study1.R`
+
+These files have been downloaded from the authors’ [replication repository](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/70UDEG). Take a moment to explore it—next time, you may need to download the files yourself!
+
+If you look at their repository, you will notice that the replication materials **do not include a codebook** for the data, so you will need to navigate their R script to identify the relevant variables.
+
+
+# Exercises
+
+## Exercise 1: Summary of the Paper and Main Findings
+
+Provide a brief summary of the paper and describe its main findings, especially those related to Study 1. Remember to be concise—two or three paragraphs are usually enough for a good summary.
+
+## Exercise 2: Data Exploration I
+
+Load the data file `study1_data.csv` into R and describe the dataset: how many variables and observations does it contain?
+
+Then, describe the experimental variables `treatment` and `imm_1` (i.e., pre-treatment attitudes toward immigration). Convert treatment into a factor (categorical) variable and use a bar plot to visualize its distribution. Next, use a histogram and a kernel density plot to visualize the distribution of immigration attitudes. What do these visualizations tell us about the data?
+
+## Exercise 3: Data Exploration II
+
+Select up to four covariates (e.g., gender, age, etc.) and plot their distributions as well. What do these visualizations tell us about the data?
+
+**Importantly**, you may need to clean (e.g., recode or remove missing values) or transform (e.g., convert a numeric into a categorical variable) some of the variables to produce appropriate visualizations. Document any changes made.
+
+## Exercise 4: Check Covariate Balance
+
+Check for balance across covariates by examining whether the mean values of your selected covariates are similar between the treatment and control groups. Report the results in a table.
+
+***Explain*** your findings. Why would you expect randomization to lead to balance across covariates?
+
+# Submission guidelines {#submission}
+
+Please submit both the PDF file and the `.qmd` file. Both files should report all the code used for analysis and annotations explaining each step.
+
+The name of the files must follow the structure *take-home_exercise_i_beginner_YOURSURNAME(S).pdf* and *take-home_exercise_i_beginner_YOURSURNAME(S).qmd*, respectively. They should be upload to the folder *Students responses/Take-home exercises/Take-home exercise I* in OLAT.
+
+Deadline: **20.11.25**
+
+# References
+
+Turnbull-Dugarte, S. J., & Ortega, A. L. (2024). Instrumentally inclusive: the political psychology of homonationalism. *American Political Science Review, 118(3)*, 1360-1378.

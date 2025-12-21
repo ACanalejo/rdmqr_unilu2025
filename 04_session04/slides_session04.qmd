@@ -1,0 +1,377 @@
+---
+title: "Data and Measurement"
+subtitle: "Session 04"
+author: "Research Design and Methods in Quantitative Research"
+institute: "Dr. Álvaro Canalejo-Molero"
+bibliography: ../00_bibliography/rdmqr.bib
+csl: ../00_bibliography/apa.csl
+toc: false
+toc-depth: 1
+number-sections: false
+echo: FALSE
+warning: FALSE
+output: TRUE
+from: markdown+emoji
+format:
+  revealjs:
+    theme:
+      - default
+      - custom.scss
+    logo: ../00_images/logo_unilu.png
+    footer: | 
+         Masterseminar - Fall Term 2025
+    title-slide-attributes:
+      data-background-image: "../00_images/unilu_building.png"
+      data-background-size: contain
+      data-background-opacity: "0.05"
+    incremental: false
+    smaller: false
+    scrollable: true
+    menu:
+      side: left
+      width: normal
+    preview-links: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    transition: slide
+    background-transition: fade
+    slide-number: true
+---
+
+## Summary overview
+
+
+<br>
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+<div style="text-align:center;">
+
+Motivating
+
+question  
+
+
+<br>
+
+<svg height="120" width="30" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  <line x1="15" y1="0" x2="15" y2="100" 
+        stroke="black" stroke-width="3" 
+        marker-end="url(#arrowhead)"/>
+</svg>
+
+
+<br>
+
+**Theory**
+
+</div>
+
+:::
+
+::: {.column width="7.5%"}
+
+<div style="text-align:center;">
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+⟶
+
+</div>
+
+:::
+
+::: {.column width="25%"}
+
+<div style="text-align:center;">
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+***Model***
+
+</div>
+
+:::
+
+::: {.column width="7.5%"}
+
+<div style="text-align:center;">
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+⟶
+
+</div>
+
+:::
+
+::: {.column width="30%"}
+
+<div style="text-align:center;">
+
+Empirical
+
+question  
+
+<br>
+
+<svg height="120" width="30" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  <line x1="15" y1="0" x2="15" y2="100" 
+        stroke="black" stroke-width="3" 
+        marker-end="url(#arrowhead)"/>
+</svg>
+ 
+
+<br>
+
+**<span class="fragment highlight-red">Hypothesis</span>**
+
+
+</div>
+
+:::
+
+:::
+
+---
+
+## Variables and hypotheses
+
+. . .
+
+<br>
+
+Theoretical models put forward an expected relationship between **variables**  
+
+However, these variables are normally **abstract concepts**, not directly observable in reality  
+
+<br>
+
+. . .
+
+E.g., ***Political sophistication***
+
+*Definition:* how knowledgeable citizens are about politics
+
+. . .
+
+Do we observe it in reality ❓
+
+## Operationalization
+
+. . .
+
+<br>
+
+It is the translation of variables into **empirical indicators**
+
+The goal is to turn our theory into **testable hypotheses** 
+
+<br>
+
+. . .
+
+For that, we use **observational manifestations** of abstract variables
+
+
+- Sometimes straightforward: e.g., *income → salary ($)*  
+- Sometimes not straightforward: e.g., *political sophistication → political knowledge survey questions*  
+
+---
+
+<br>
+
+<div style="text-align:center;">
+
+![Summary (Figure 1.2 KW)](fig1.2_kw.png)
+
+</div>
+
+## Assessing measurement
+ 
+. . .
+ 
+Two main *criteria*:  
+
+- **Reliability:** the extent to which a measure produces consistent results  
+
+- **Validity:** the extent to which a measure captures the concept it is supposed to  
+
+    - Face validity
+    - Content validity
+    - Construct validity
+
+## Reliable vs. valid measures
+
+. . .
+
+![](validity_reliability.png){width=70% fig-align="center"}
+
+## Measurement error vs. bias
+
+![](measurement_bias_variance.png){width=70% fig-align="center"}
+
+---
+
+![](bias_vs_random.gif)
+---
+
+<br>
+
+![](bias_vs_random_distributions.gif)
+
+## Assessing validity
+
+. . .
+
+<div style="font-size:80%;">
+
+- **Face validity**  
+
+Does the indicator look like it measures the concept? (e.g., *I know it when I see it*)
+
+- **Content validity**  
+
+Does the indicator capture the full range of the concept?
+
+- **Construct validity**  
+
+Does the indicator behave as theory predicts it should, in relation to other variables?
+
+</div>
+
+---
+
+## Beyond reliability and validity...
+
+. . . 
+
+<div style="text-align:center;">
+
+![Figure 1 Turnbull-Dugarte & Wagner](turnbull-dugarte_wagner_fig1.png){width=85%}
+</div>
+
+---
+
+![](2volunteers_meme.png){fig-align="center"}
+
+## Group exercise
+
+. . .
+
+<div style="font-size:80%">
+
+Pair up and evaluate each other’s answers to the Session 3 and Session 4 questions.  
+
+<br>
+
+**1. Check your partner’s research question and hypothesis (Session 3):**  
+- Can you identify the main argument of your partner’s theory? Is it correct?  
+- Can you refine the research question and hypothesis to make them more consistent with the theory? 
+
+<br>
+
+**2. Check the empirical indicators your partner proposed (Session 4):**  
+- Can you suggest better empirical indicators for the variables?  
+- Can you agree together on the best indicators?  
+
+</div>
+
+# Conclusion
+
+
+---
+
+<div style="text-align:center;">
+
+![Data measurement summary (Figure 5.1 KW)](fig5.1.png){width=75%}
+
+</div>
+
+
+## Next session (23.10.25 - 14:15)
+
+<br>
+
+Descriptive Inference
+
+<br>
+
+<br>
+
+. . .
+
+**Before...**
+
+<br>
+
+Presentation by **Olivia Lea Landis**:
+
+*Measuring democratic backsliding*
+
+---
+
+![](questions.png){fig-align="center"}
+
+## Choose R track & get a presentation slot!
+
+![](reminder.png){fig-align="center"}
+
+## Thanks! :slightly_smiling_face:
+
+<br>
+
+<br>
+
+<br>
+
+<center>[alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)</center>
+
+

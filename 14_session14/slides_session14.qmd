@@ -1,0 +1,181 @@
+---
+title: "Conclusion"
+subtitle: "Session 14"
+author: "Research Design and Methods in Quantitative Research"
+institute: "Dr. Álvaro Canalejo-Molero"
+bibliography: ../00_bibliography/rdmqr.bib
+csl: ../00_bibliography/apa.csl
+toc: false
+toc-depth: 1
+number-sections: false
+echo: FALSE
+warning: FALSE
+output: TRUE
+from: markdown+emoji
+format:
+  revealjs:
+    theme:
+      - default
+      - custom.scss
+    logo: ../00_images/logo_unilu.png
+    footer: | 
+         Masterseminar - Fall Term 2025
+    title-slide-attributes:
+      data-background-image: "../00_images/unilu_building.png"
+      data-background-size: contain
+      data-background-opacity: "0.05"
+    incremental: false
+    smaller: false
+    scrollable: true
+    menu:
+      side: left
+      width: normal
+    preview-links: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    transition: slide
+    background-transition: fade
+    slide-number: true
+---
+
+## Wrap-Up
+
+<br>
+
+. . .
+
+<div style="font-size:60%; line-height:1.2;">
+
+| Session | Topic | Core focus |
+|--|---------|---------------|
+| 2 | **The logic of scientific research** | Defining research questions |
+| 3 | **Theory and research design** | Deriving hypotheses from theory |
+| 4 | **Data and measurement** | Validity and reliability of measures |
+| 5 | **Descriptive inference** | Summarizing and describing data |
+| 6 | **Causal inference** | Potential outcomes framework |
+| 7 | **Predictive inference** | Prediction versus causality |
+| 8 | **Experimental studies** | Randomization and average treatment effects |
+| 9 | **Large-N observational studies** | Design/Regression-based causal inference |
+|10 | **Small-N observational studies** | Mixed-method research designs |
+|11 | **Statistical testing** | Sampling uncertainty and inference |
+|12 | **Introduction to regression I** | Estimating coefficients and uncertainty |
+|13 | **Introduction to regression II** | Statistical control and advanced topics overview |
+
+</div>
+
+---
+
+![](abstract_huntington.png){fig-align="center"}
+
+---
+
+![](tab1_huntington.png){fig-align="center"}
+
+---
+
+![](fig1_huntington.png){fig-align="center"}
+
+## Methods are Just Tools!
+
+. . .
+
+- Your decisions must be **goal-oriented** and **theory-driven**
+
+- Because **arbitrariness** exists, being **transparent** and **reproducible** is key
+
+- **Sensitivity analyses** are crucial: different **assumptions**, different **measures**, different **models** — report everything
+
+. . .
+
+<br>
+
+<span style="color:darkblue;">**Hopefully, research something that you like**</span>
+
+  - Research can be hard, but also **fulfilling** :)
+  
+
+---
+
+![](questions.png){fig-align="center"}
+
+# Final group activity
+
+![](pikachu.png){fig-align="center"}
+
+---
+
+<div style="font-size:60%; line-height:1.2;">
+
+*Imagine you receive a 1,000,000 CHF SNF grant to answer the following question...*
+
+</div>
+
+<div style="height: 0.5em;"></div>
+
+. . .
+
+<div style="font-size:120%; line-height:1.2;">
+
+**What is the effect of social media use on youths’ political engagement and behavior?**
+
+</div>
+
+<div style="height: 0.5em;"></div>
+
+. . .
+
+<div style="font-size:80%; line-height:1.2;">
+
+Let's divide the class into ***three groups*** and prepare a research design to test **one (simple) hypothesis** of your choice to answer this question!
+
+</div>
+. . .
+
+<div style="height: 0.5em;"></div>
+
+<div style="font-size:60%; line-height:1.2;">
+
+**Structure**
+
+- **20 minutes** for internal group discussion  
+
+- **Up to 5 minutes per group** to present the hypothesis and research design  
+  *(one speaker)*  
+
+- **Up to 5 minutes per group** to provide **constructive feedback** to the other groups  
+  *(another speaker)*  
+  
+- **Q&A**
+
+</div>
+
+## Votation!
+
+<br>
+
+- Each student votes for the **best design other than their own**
+
+- The design with the **most votes wins**
+
+- In the event of a tie, the **lecturer casts the deciding vote**
+
+. . .
+
+![](win.png){fig-align="center"}
+
+
+## It's being an enormous pleasure! :slightly_smiling_face:
+
+. . .
+
+<br>
+
+<br>
+
+**Thank you all!**
+
+<br>
+
+<center>[alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)</center>

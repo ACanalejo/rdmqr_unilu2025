@@ -1,0 +1,79 @@
+---
+title: "Replicating an Observational Study (THE II - Advanced)"
+subtitle: "Research Design and Methods in Quantitative Research - Fall 2025"
+author: "Álvaro Canalejo-Molero"
+date: 2025-11-20
+output: 
+  pdf_document:
+    keep_tex: false
+format:
+  pdf:
+    toc: false
+    toc-depth: 2
+execute:
+  echo: true       # Show all code
+  warning: false   # Suppress warnings
+---
+
+# Instructions
+
+Please read and follow the guidelines below carefully. Then, complete the exercises and report the results in a Quarto document. Compile the Quarto document in PDF and submit both the compiled PDF and `.qmd` files within the deadline. 
+
+Further instructions about the submission are [below](#submission).
+
+## Preparation: Read the Assigned Paper and Download the Replication Files
+
+*(It is assumed that you installed R and RStudio, and learned to prepare a Quarto document for the previous Take-Home Exercise. In case of doubt, you can consult the preparation guidelines for Take-Home Exercise I.)*
+
+You will need to read the paper [*Wealth of Tongues: Why Peripheral Regions Vote for the Radical Right in Germany*](https://www.cambridge.org/core/journals/american-political-science-review/article/wealth-of-tongues-why-peripheral-regions-vote-for-the-radical-right-in-germany/62F03CD9CE943FBFD077F8CE79AFE999), which was assigned as the applied reading for ***session 09***.
+
+When you have read the paper, look in their [replication files](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MP1AKL) for the necessary files to replicate the main findings. In particular, locate and download:
+
+- Data file: `data_main.rds`
+- R Script: `tab_1_A4_A6_A7_A11.R`
+
+Once again, you will notice that the replication materials **do not include a codebook** for the data (as you see, this is often the case), so you will need to navigate the dataset and R script to identify the relevant variables.
+
+# Exercise
+
+## Exercise 1: Summary of the Paper and Main Findings
+
+Provide a brief summary of the paper. Describe the main findings, especially those related to the effect of dialectal distance on voting for AfD at the county-level.
+
+## Exercise 2: Data Exploration
+
+Use the data file `data_main.rds` to begin the replication process.  
+The main independent variable is the dialectal distance to Hannover (`hannover_dist`).  
+The dependent variable is the county-level AfD vote share (`afd_party_17`).  
+
+First, provide visualizations of their distributions. Then, generate a scatter plot of the relationship between dialectal distance and AfD vote share. What can we learn from these visualizations?
+
+## Exercise 3: Replicate Baseline Specification
+
+Now, use the same code as the authors in `tab_1_A4_A6_A7_A11.R` to replicate `m0`. This is their baseline model without state fixed effects (`state`), where they cluster the standard errors by county (`ags_2017`). Comment on whether your replication was successful.
+
+Then, replicate the model adding state fixed effects without any additional covariates and comment on the results. How do they differ from your previous specification? And from the authors’ reported results? Please explain why you think the results differ.
+
+**PS:** Please remember to always scale the main independent variable. You can use the function `scale()`, as the authors do in their code. For fixed-effects models, follow the authors’ approach and use the function `felm` from the package `lfe`.
+
+## Exercise 4: Replication with Different Covariates I
+
+Now add **two** covariates to the baseline specification (i.e., without state fixed effects). You may select any covariates from the authors’ model `m01`. Justify your selection of covariates, and then explain how the results differ from the previous specifications.
+
+Based on the results, do you think you selected useful covariates to control for?
+
+## Exercise 5: Replication with Different Covariates II
+
+To finish, add state fixed effects to your specification with two control variables. Compare your results across all specifications. What conclusions can you draw about the role of control variables in isolating causal effects?
+
+# Submission guidelines {#submission}
+
+Please submit both the PDF file and the `.qmd` file. Both files should report all the code used for analysis and annotations explaining each step.
+
+The name of the files must follow the structure *take-home_exercise_ii_advanced_YOURSURNAME(S).pdf* and *take-home_exercise_ii_advanced_YOURSURNAME(S).qmd*, respectively. They should be upload to the folder *Students responses/Take-home exercises/Take-home exercise II* in OLAT.
+
+Deadline: **04.12.25**
+
+# References
+
+Ziblatt, D., Hilbig, H., & Bischof, D. (2024). Wealth of tongues: Why peripheral regions vote for the radical right in germany. American Political Science Review, 118(3), 1480-1496.

@@ -1,0 +1,187 @@
+---
+title: "The Logic of Scientific Research"
+subtitle: "Session 02"
+author: "Research Design and Methods in Quantitative Research"
+institute: "Dr. Álvaro Canalejo-Molero"
+bibliography: ../00_bibliography/rdmqr.bib
+csl: ../00_bibliography/apa.csl
+toc: false
+toc-depth: 1
+number-sections: false
+echo: FALSE
+warning: FALSE
+output: TRUE
+from: markdown+emoji
+format:
+  revealjs:
+    theme:
+      - default
+      - custom.scss
+    logo: ../00_images/logo_unilu.png
+    footer: | 
+         Masterseminar - Fall Term 2025
+    title-slide-attributes:
+      data-background-image: "../00_images/unilu_building.png"
+      data-background-size: contain
+      data-background-opacity: "0.05"
+    incremental: false
+    smaller: false
+    scrollable: true
+    menu:
+      side: left
+      width: normal
+    preview-links: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    transition: slide
+    background-transition: fade
+---
+
+## The goal of *good* research
+
+<br>
+
+> To *“produce valid inferences about social and political life”* (King, Keohane, & Verba 1994, p. 3)
+
+. . .
+
+<br>
+
+**What is inference?**
+
+<br>
+
+. . .
+
+The process of drawing conclusions from what we **observe** to what we do **not (yet) observe**.
+
+
+## Scientific inference
+
+<br>
+
+Inferences that draw on evidence and reasoning, following a series of rules (or methods)
+
+. . .
+
+<br>
+
+*The methods make the science, not the content*
+
+- They must be **public**  
+- They must provide a **measure of uncertainty**  
+  *(scientific conclusions are always tentative!)*
+
+
+## Components of a research design
+
+<br>
+
+- **Research question** (this session)  
+- **Theory** (session 3)  
+- **Data** (session 4)  
+- **Methods**: depend on inferential goals (sessions 5, 6, 7), resources, and data availability (sessions 8, 9, 10).  
+  We will focus on **quantitative methods** (sessions 11, 12, 13)
+
+
+## The research question
+
+There is no logical recipe for having good ideas.  
+
+. . .
+
+It depends on interest, creativity, knowledge... and luck.  
+
+. . .
+
+However, some guidelines:  
+
+- Must be **relevant**  
+- Answering it should make a **contribution**  
+  (know your literature! or goal — e.g., private company)  
+- Should be **researchable** (realistic plans to answer it!)
+- Should be **focused**
+
+
+## Types of research questions
+
+<br>
+
+| Question      | Focus        | Example                                |
+|---------------|-------------|----------------------------------------|
+| **What**      | Descriptive | What is voter turnout in country X?    |
+| **How**       | Explanatory | How do campaigns influence turnout?    |
+| **Why**       | Causal      | Why do some groups vote more than others? |
+
+<br>
+
+## Group exercise: Think of a research question!
+
+. . .
+
+<div style="font-size:90%">
+
+- Take **two minutes** to write a research question on something that interests you  
+- Choose a partner next to you and share your research question  
+- Your partner should do the same with you  
+- Assess your partner's question (**three minutes**):  
+  - Does it meet the criteria above?  
+  - How could it be improved?  
+
+</div>
+
+## Share your research question!
+
+<br>
+
+![](volunteer_meme.png){fig-align="center"}
+
+
+## Conclusion
+
+<br>
+
+A good **research question** is the first component of an effective research design  
+
+. . .
+
+In two weeks, we will examine more of your research questions and assess how to connect them with a **theory and hypotheses**  
+
+
+---
+
+<br>
+
+<br>
+
+The ultimate goal of this course is to ***think like a social scientist*** 
+
+. . .
+
+<br>
+
+Connect real-world observations to theory and methods
+
+. . .
+
+<br>
+
+**Remain skeptical!**  
+
+---
+
+![](questions.png){fig-align="center"}
+
+## Thanks! :slightly_smiling_face:
+
+<br>
+
+<br>
+
+<br>
+
+<center>[alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)</center>
+
+

@@ -1,0 +1,231 @@
+---
+title: "Small-N Observational Studies"
+subtitle: "Session 10"
+author: "Research Design and Methods in Quantitative Research"
+institute: "Dr. Álvaro Canalejo-Molero"
+bibliography: ../00_bibliography/rdmqr.bib
+csl: ../00_bibliography/apa.csl
+toc: false
+toc-depth: 1
+number-sections: false
+echo: FALSE
+warning: FALSE
+output: TRUE
+from: markdown+emoji
+format:
+  revealjs:
+    theme:
+      - default
+      - custom.scss
+    logo: ../00_images/logo_unilu.png
+    footer: | 
+         Masterseminar - Fall Term 2025
+    title-slide-attributes:
+      data-background-image: "../00_images/unilu_building.png"
+      data-background-size: contain
+      data-background-opacity: "0.05"
+    incremental: false
+    smaller: false
+    scrollable: true
+    menu:
+      side: left
+      width: normal
+    preview-links: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    transition: slide
+    background-transition: fade
+    slide-number: true
+---
+
+---
+
+![](course_evaluation_qr.png){fig-align="center"}
+
+
+
+## Large vs small-N studies
+
+<br>
+
+. . .
+
+**Large-N:** enough cases to estimate the desired statistical model <span style="color:grey;">(depending on the number of parameters)</span> and to quantify uncertainty <span style="color:grey;">(depending on variation in the variables)</span>  
+
+→ Rule of thumb: $N ≳ 30$
+
+<br>
+
+. . .
+
+**Small-N:** not enough cases to estimate the desired statistical model or quantify uncertainty  
+
+→ Rule of thumb: $N ≲ 30$
+
+## Small-N studies
+
+<br>
+
+. . .
+
+They may be the only feasible option for **small-N processes** (e.g., revolutions) or when data are scarce
+
+<br>
+
+. . .
+
+Additionally, they can provide a **qualitative understanding** of processes typically lacking in statistical analyses (e.g., meanings and interpretations)
+
+
+## **This course** ***is not*** **about qualitative methods...**
+
+<br>
+
+<br>
+
+. . .
+
+**...but let's have a quick overview!**
+
+## Small-N causal inference methods: cross-case analyses
+
+<br>
+
+- Method of difference (or *most different systems design*)
+
+- Method of agreement (or *most similar systems design*)
+
+- Method of concomitant variation
+
+- Quantitative Qualitative Analysis (QCA): $N ≈ 20$
+
+## Small-N causal inference methods: within-case analyses
+
+<br>
+
+- Pattern Matching
+
+- **Process tracing**
+
+- Causal narrative
+
+## Interpretative methods
+
+<br>
+
+- Focus groups
+
+- Semi-structured interviews
+
+- Ethnography
+
+- Discourse analysis
+
+- Qualitative coding of open-ended questions
+
+. . .
+
+→ ...but there's ***not*** *always* a ***clear line***!
+
+---
+
+![](llm_qual.png){fig-align="center"}
+
+
+## Mixed-methods
+
+<br>
+
+. . .
+
+Combines **quantitative** and **qualitative** approaches to strengthen inference:
+
+- Quantitative methods identify patterns, estimate uncertainty and causal effects
+
+- Qualitative methods clarify meanings and contextual factors, shedding light on mechanisms
+
+. . .
+
+Together, they can improve **validity**, **interpretation**, and **causal understanding**
+
+---
+
+![](losers_dissent.png){fig-align="center"}
+
+---
+
+![](losers_dissent_qual.png){fig-align="center"}
+
+# Conclusion
+
+## Small-N analysis: a summary
+
+. . .
+
+<br>
+
+- Sometimes the only *feasible option*
+
+. . .
+
+- The **key distinction** is that it **does not allow** the use of **statistical methods**, so quantification of associations, effects, and uncertainty is not feasible
+
+. . .
+
+- However, it can provide **qualitative information** that can be usefully coupled with quantitative analysis (i.e., ***mixed methods***) to improve inference
+
+---
+
+![](volunteer_meme.png){fig-align="center"}
+
+## Using DAGs to select control variables
+
+<br>
+
+1️⃣ ***Volunteer***
+
+→ **Draw your DAG** on the board and **justify** your **control variable** choice
+
+<br>
+
+
+2️⃣ ***Class feedback***
+
+→ Does the **DAG** correctly represent the assumed **causal structure**?  
+→ Is the **proposed control variable** appropriate? Are there **alternative** controls or assumptions worth considering? 
+
+
+## Next session (04.12.25 - 14:15)
+
+<br>
+
+*→ Statistical testing*
+
+<br>
+
+. . .
+
+**Before...**
+
+<br>
+
+Presentation by **Anastasiia Lunkova & Bernhard Eymann**:
+
+*Regulating Uber: The politics of the platform economy in Europe and the United States*
+
+---
+
+![](questions.png){fig-align="center"}
+
+
+## Thanks! :slightly_smiling_face:
+
+<br>
+
+<br>
+
+<br>
+
+<center>[alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)</center>

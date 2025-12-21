@@ -1,0 +1,327 @@
+---
+title: "Large-N Observational Studies"
+subtitle: "Session 09"
+author: "Research Design and Methods in Quantitative Research"
+institute: "Dr. Álvaro Canalejo-Molero"
+bibliography: ../00_bibliography/rdmqr.bib
+csl: ../00_bibliography/apa.csl
+toc: false
+toc-depth: 1
+number-sections: false
+echo: FALSE
+warning: FALSE
+output: TRUE
+from: markdown+emoji
+format:
+  revealjs:
+    theme:
+      - default
+      - custom.scss
+    logo: ../00_images/logo_unilu.png
+    footer: | 
+         Masterseminar - Fall Term 2025
+    title-slide-attributes:
+      data-background-image: "../00_images/unilu_building.png"
+      data-background-size: contain
+      data-background-opacity: "0.05"
+    incremental: false
+    smaller: false
+    scrollable: true
+    menu:
+      side: left
+      width: normal
+    preview-links: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    transition: slide
+    background-transition: fade
+    slide-number: true
+---
+
+## Take-home exercises
+
+<br>
+
+![](feedback.png){fig-align="center"}
+
+. . .
+
+<br>
+
+**Take-home exercises II** already in **OLAT**
+
+<br>
+
+<br>
+
+## Session 8 - Experimental studies
+
+. . .
+
+- Because of the **FPCI**, we focus on the **Average Treatment Effect (ATE)**
+
+
+. . .
+
+- However, **naïve comparisons** yield **biased estimates** due to **self-selection**  
+
+
+. . .
+
+- **Randomized experiments** are the *gold standard* because randomization removes **selection bias** in **large samples** (i.e., the *Law of Large Numbers*)
+
+
+## 👥 Group activity session 8
+
+<br>
+
+<div style="font-size:95%; line-height:1.2;">
+
+In pairs, review each other’s exercise:  
+
+1️⃣ Without randomization, would comparing your partner’s **treatment** and **control** groups' outcome values identify the **ATE**?  
+  → Why or why not? 💭 Help each other fix any issues!
+
+<br>
+
+2️⃣ Check your partner's **confounders**, do they threaten **causal identification**?  
+  → Can you suggest other potential confounders? 🧩
+
+</div>
+
+## The caveats of experiments
+
+<br>
+
+. . .
+
+Experiments are the *gold standard* of causal inference but they have **limitations**
+
+. . .
+
+- Costly
+
+- Unethical
+
+- Unfeasible
+
+. . .
+
+In addition, while experiments excel in **internal validity**, they may have poor ***external validity***
+
+## Experimental vs. observational data
+
+<br>
+
+**Experimental data:** The researcher *controls treatment assignment*, typically through ***randomization***
+
+<br>
+
+**Observational data:**  The researcher *does not control* who receives the treatment; **treatment assignment arises** ***endogenously***, typically by *self-selection*
+
+. . .
+
+→ However, **natural settings** typically allow better **external validity** and, in some cases, *might* be the **only option** available
+
+
+## Causal inference with (large-N) observational data
+
+<br>
+
+. . .
+
+Two ***approaches***:
+
+. . .
+
+  1. **Design-based inference** (e.g., natural experiments, quasi-experiments)
+
+. . .
+
+  2. **Statistical-based inference**
+
+## Design-based inference
+
+<br>
+
+Exploiting **naturally** occurring **random or quasi-random assignment**
+
+. . .
+
+- **Lotteries** (e.g., Vietnam draft lottery)
+
+- **Policy thresholds** (e.g., state funding only if a municipality exceeds a population cutoff)
+
+- **Exogenous variation** (e.g., natural disasters)
+
+---
+
+![](vietnam_draft.png){fig-align="center"}
+
+
+## Statistical-based inference
+
+<br>
+
+When (quasi-)randomization is not possible, we can use **statistical methods** (e.g., regression) to artificially **hold covariates constant** (i.e., *ceteris paribus*)
+
+. . .
+
+<br>
+
+We call this process ***control***: adding measures of **covariates** into our statistical model to remove selection bias 
+
+. . .
+
+However, *controlling for all other covariates* is ultimately *impossible*; therefore, ***we need to choose them carefully***
+
+## Selecting good controls
+
+<br>
+
+. . .
+
+1. Select variables that **confound** our relationship of interest
+
+. . .
+
+$$
+ \text{In} \quad Z \longrightarrow X,\; Z \longrightarrow Y, \quad \text{Z  is a confounder}
+$$
+
+. . .
+
+In this case, controlling for $Z$ is a good idea!
+
+. . .
+
+Controlling for $Z$ removes the part of the association between $X$ and $Y$ that is actually **due to** $Z$, giving us a cleaner estimate of the *ATE* of $X$
+
+#
+
+![Control for Z in this cases (Cinelli et al. 2024)](fig1_cinelli.png){width=60% fig-align="center"}
+
+. . .
+
+![DON'T control for Z in these cases (Cinelli et al. 2024)](fig8_cinelli.png){width=45% fig-align="center"}
+
+## Selecting good controls
+
+<br>
+
+1. Select variables that **confound** our relationship of interest
+
+2. Select those confounders **closer** to $Y$, as long as they don't introduce bias (e.g., avoid colliders or mediators)
+
+##
+
+
+![AJ Chapter 2](regtab_ajchap2.png){width=45% fig-align="center"}
+
+## Selecting good controls
+
+<br>
+
+1. Select variables that **confound** our relationship of interest
+
+2. Select those confounders **closer** to $Y$, as long as they don't introduce bias (e.g., avoid colliders or mediators)
+
+3. Collect **good measures** of the intended control variables  <span style="color:grey;">(see session 4)</span>
+
+. . .
+
+4. Avoid **redundant controls** (e.g., political interest and political discussion)
+
+## Omitted controls
+
+<br>
+
+Even after *careful modeling*, we may not convince everyone that we have controlled for **all relevant sources of bias**
+
+. . .
+
+→ **Omitted variable bias (OVB)** arises when an important factor is left out of the model, distorting the estimated ATE
+
+. . .
+
+Our specification must be guided by *theoretical reasoning*,  but we must always check the **robustness** of our results under **different assumptions** and **model specifications**
+
+. . .
+
+→ I.e., we must perform ***sensitivity analyses***
+
+## 
+
+![Ziblatt et al 2023](ziblatt2023.png){fig-align="center"}
+
+## Types of observational data
+
+. . .
+
+Different data sources offer different possibilities for **statistical control**
+
+. . .
+
+- **Cross-sectional data:** many units at one point in time (use variation across units to control for time-invariant factors)
+
+- **Longitudinal data:** one unit observed over time  (use within-unit changes to control for time-varying factors)
+
+- **Panel data:** many units over time (combines both sources of variation; useful for causal inference but *never better than randomization*)
+
+# Conclusion
+
+## Causal inference with large-N observational data 
+
+. . .
+
+- **Design-based inference** exploits naturally random or quasi-random (i.e., exogenous) variation
+
+. . .
+
+- **Statistical-based inference** uses statistical models to artificially hold other factors constant (i.e., *ceteris paribus* condition)
+
+. . .
+
+- It requires solid **theoretical reasoning** (i.e., selecting **good controls**) and careful **sensitivity analyses**
+
+## Your turn! Using DAGs to select control variables
+
+<br>
+
+. . .
+
+![](later.png){width=55% fig-align="center"}
+
+## Next session (16:15)
+
+<br>
+
+*→ Small-N observational studies (and DAGs' exercise)*
+
+<br>
+
+. . .
+
+**Before...**
+
+<br>
+
+Presentation by **Giulio Paraboni & Nikolina Djogova**:
+
+*Wealth of tongues: Why peripheral regions vote for the radical right in Germany*
+
+---
+
+![](questions.png){fig-align="center"}
+
+## Thanks! :slightly_smiling_face:
+
+<br>
+
+<br>
+
+<br>
+
+<center>[alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)</center>

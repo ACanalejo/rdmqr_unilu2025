@@ -1,0 +1,268 @@
+---
+title: "Replicating a Experimental Study (THE I)"
+subtitle: "Research Design and Methods in Quantitative Research"
+author: "Álvaro Canalejo-Molero"
+date:  "`r format(as.Date('2025-11-06'), '%d %b %Y')`"
+output: 
+  pdf_document:
+    keep_tex: false
+format:
+  pdf:
+    toc: false
+    toc-depth: 2
+execute:
+  echo: true       # Show all code
+  warning: false   # Suppress warnings
+---
+
+# Instructions
+
+Please read and follow the guidelines below carefully. Then, complete the exercises and report the results in a Quarto document. Compile the Quarto document in PDF and submit both the compiled PDF and `.qmd` files within the deadline. 
+
+Further instructions about the submission are [below](#submission).
+
+## Preparation step 1: Install R and RStudio
+
+To complete this exercise, you will need **R** and **RStudio**. If you don't have them installed already, download and install them from:
+
+- [R](https://cran.r-project.org/)
+
+- [RStudio](https://posit.co/download/rstudio-desktop/)
+
+A tutorial on how to start using R and R Studio is [here](https://hbctraining.github.io/Intro-to-R-flipped/lessons/01_introR-R-and-RStudio.html). Please **contact the lecturer** and collaborate with your classmates if you have any doubts or need help.
+
+## Preparation step 2: Prepare a Quarto Document
+
+Open RStudio, create a new Quarto document (`.qmd`), and set the output format to PDF. Make sure your Quarto installation is up-to-date:
+
+```{r}
+
+# Install Quarto if needed
+## Run this line in a separate script or the Quarto document will not compile
+# install.packages("quarto")
+
+```
+
+You can find help on how to set up a Quarto document [here](https://quarto.org/docs/get-started/hello/rstudio.html).
+
+## Preparation step 3: Read the Assigned Paper and Download the Replication Files
+
+You will need to read the paper [*Instrumentally Inclusive: The Political Psychology of Homonationalism*](https://www.cambridge.org/core/journals/american-political-science-review/article/instrumentally-inclusive-the-political-psychology-of-homonationalism/1D9425F6FA20F34B0918018275A507A8), which you can find in the exercise materials folder.
+
+After reading the paper, download the Study 1 replication materials, also provided in the materials folder:
+
+- Data file: `study1_data.csv`  
+- R script: `study1.R`
+
+These files have been downloaded from the authors’ [replication repository](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/70UDEG). Take a moment to explore it—next time, you may need to download the files yourself!
+
+If you look at their repository, you will notice that the replication materials **do not include a codebook** for the data, so you will need to navigate their R script to identify the relevant variables.
+
+
+# Exercises
+
+## Exercise 1: Summary of the Paper and Main Findings
+
+Provide a brief summary of the paper and describe its main findings, especially those related to Study 1. Remember to be concise—two or three paragraphs are usually enough for a good summary.
+
+## Exercise 2: Data Exploration
+
+Load the data file `study1_data.csv` into R and describe the dataset. Then, describe the experimental variables `treatment` and `imm_1` (i.e., pre-treatment attitudes toward immigration) by providing visualizations of their distributions. Next, select up to four covariates (e.g., gender, age, etc.) and plot their distributions as well. What do these visualizations tell us about the data?
+
+**Importantly**, you may need to clean (e.g., recode or remove missing values) or transform (e.g., convert a numeric into a categorical variable) some of the variables to produce appropriate visualizations. Document any changes made.
+
+
+```{r}
+
+# Load necessary packages
+library(tidyverse) # tidyverse environment
+library(ggplot2) # nice plots
+
+# Load the data
+data <- read_csv("take_home_exercise_1_materials/study1_data.csv")
+
+# Subset the data
+data_subset <- data |> 
+  dplyr::select(
+         support, # outcome variable
+         treatment, # treatment variable
+         imm_1, # conditional variable
+         age,
+         gender,
+         degree,
+         nonwhite
+         ) |>
+  # Factorizing variables
+  mutate(treatment_fct = as.factor(treatment),
+         gender_fct = as.factor(gender),
+         gender = as.numeric(gender_fct),
+         degree_fct = as.factor(degree),
+         nonwhite_fct = as.factor(nonwhite),
+         nonwhite = as.numeric(nonwhite_fct))
+
+# Display summary of main variables
+summary(data_subset)
+
+# Visualize the distribution of the treatment variable
+ggplot(data_subset, aes(x = treatment_fct)) +
+  geom_bar(fill = "skyblue") +
+  labs(title = "Distribution of Treatment Variable",
+       x = "Treatment",
+       y = "Count") +
+  theme_minimal()
+
+# Visualize the distribution of the immigration attitudes variable
+ggplot(data_subset, aes(x = imm_1)) +
+  geom_histogram(binwidth = 1, fill = "salmon", color = "black") +
+  labs(title = "Distribution of Immigration Attitudes",
+       x = "Immigration Attitudes",
+       y = "Frequency") +
+  theme_minimal()
+
+# Select and visualize distributions for up to four covariates 
+
+## Gender
+ggplot(data_subset, aes(x = gender_fct)) +
+  geom_bar(fill = "lightgreen") +
+  labs(title = "Distribution of Gender",
+       x = "Gender",
+       y = "Count") +
+  theme_minimal()
+
+## Age
+ggplot(data_subset, aes(x = age)) +
+  geom_histogram(binwidth = 1, fill = "purple", color = "black") +
+  labs(title = "Distribution of Age",
+       x = "Ideology",
+       y = "Frequency") +
+  theme_minimal()
+
+## Degree
+ggplot(data_subset, aes(x = degree_fct)) +
+  geom_bar(fill = "lightcoral") +
+  labs(title = "Distribution of Degree",
+       x = "Degree",
+       y = "Count") +
+  theme_minimal()
+
+## Nonwhite
+ggplot(data_subset, aes(x = nonwhite_fct)) +
+  geom_bar(fill = "lightblue") +
+  labs(title = "Distribution of Nonwhite",
+       x = "Nonwhite",
+       y = "Count") +
+  theme_minimal()
+
+```
+
+## Exercise 3: Check Covariate Balance
+
+Check for balance across covariates by examining whether the mean values and distributions of your selected covariates are similar between the treatment and control groups. Report the results in a table *and* with plots.
+
+***Explain*** your findings. Why would you expect randomization to lead to balance across covariates?
+
+```{r}
+
+# Load necessary packages
+library(tableone) # tables for covariate balance
+library(broom) # tidy data from models
+library(purrr) # + tidy data from models
+
+# Define covariates to check for balance
+covariates <- c("imm_1", "age", "gender", "degree", "nonwhite")
+
+# Create a balance table by treatment
+balance_table <- CreateTableOne(vars = covariates, 
+                                strata = "treatment_fct", 
+                                data = data_subset)
+
+# Print the balance table
+print(balance_table, showAllLevels = TRUE)
+
+# Run regressions and extract coefficients
+balance_results_df <- map_dfr(covariates, function(covariate) {
+  model <- lm(as.formula(paste(covariate, "~ treatment_fct")), 
+              data = data_subset)
+  tidy(model) |>
+    filter(term == "treatment_fct1") |>  # Modify if different factor levels
+    mutate(covariate = covariate)
+})
+
+# Plot the coefficients for treatment effects on covariates
+ggplot(balance_results_df, aes(x = estimate, y = covariate)) +
+  geom_point(color = "blue") +
+  geom_errorbarh(aes(xmin = estimate - 1.96 * std.error,
+                     xmax = estimate + 1.96 * std.error), height = 0.2) +
+  labs(title = "Effect of Treatment on Covariates",
+       x = "Coefficient Estimate (Treatment Effect)",
+       y = "Covariates") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "red") +
+  theme_minimal()
+
+```
+
+## Exercise 4: Replicate the Main Finding by Varying Sample Size
+
+Estimate the average effect of the treatment (ATE) on the outcome variable `support` conditional on the pre-treatment immigration attitudes `imm_1`. To do this, run the following script (change variable names if you made any modifications earlier): 
+
+```{r}
+# Run an OLS model with int. between treatment and immigration attitudes
+## Change 'df' with the name you gave to the dataset
+# model_study1 <- lm(support ~ treatment * imm_1, data = df)
+
+# Check the results
+# summary(model_study1)
+```
+
+
+The code line you just ran estimates an OLS regression with an interaction term between the experimental treatment and pre-treatment attitudes toward immigration, exactly as reported in the original paper. Compare these results with those of the authors.
+
+Next, repeat the analysis using three progressively smaller random samples of the treatment and control groups (n = 200, n = 50, and n = 5 per group), resulting in total sample sizes of N = 400, 100, and 10, respectively.
+
+Explain your findings: does the sample size affect the results? Why?
+
+```{r}
+
+# Set seed for replication
+set.seed(123)
+
+# Run an OLS model with int. between treatment and immigration attitudes
+model_study1 <- lm(support ~ treatment_fct * imm_1, data = data_subset)
+summary(model_study1)
+
+# Set sample sizes for treatment and control groups
+sample_sizes <- c(200, 50, 5)
+
+# Function to sample and fit model
+sample_and_fit <- function(n) {
+  sample_data <- data_subset |>
+    group_by(treatment_fct) |>
+    sample_n(n) |>
+    ungroup()
+  
+  # Fit the model on the sample data
+  model_sample <- lm(support ~ treatment_fct * imm_1, data = sample_data)
+  
+  # Summarize the model and return coefficients
+  tidy(model_sample) |>
+    filter(term == "treatment_fct1:imm_1") |> # Interaction term for CATE
+    mutate(sample_size = n * 2) # Total sample size
+}
+
+# Apply function for each sample size and combine results
+results_samples <- map_dfr(sample_sizes, sample_and_fit)
+print(results_samples)
+
+```
+
+# Submission guidelines {#submission}
+
+Please submit both the PDF file and the `.qmd` file. Both files should report all the code used for analysis and annotations explaining each step.
+
+The name of the files must follow the structure *take-home_exercise_i_advanced_YOURSURNAME(S).pdf* and *take-home_exercise_i_advanced_YOURSURNAME(S).qmd*, respectively. They should be upload to the folder *Students responses/Take-home exercises/Take-home exercise I* in OLAT.
+
+Deadline: **20.11.25**
+
+# References
+
+Turnbull-Dugarte, S. J., & Ortega, A. L. (2024). Instrumentally inclusive: the political psychology of homonationalism. *American Political Science Review, 118(3)*, 1360-1378.

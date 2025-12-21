@@ -1,0 +1,513 @@
+---
+title: "Introduction to Regression II"
+subtitle: "Session 13"
+author: "Research Design and Methods in Quantitative Research"
+institute: "Dr. Álvaro Canalejo-Molero"
+bibliography: ../00_bibliography/rdmqr.bib
+csl: ../00_bibliography/apa.csl
+toc: false
+toc-depth: 1
+number-sections: false
+echo: FALSE
+warning: FALSE
+output: TRUE
+from: markdown+emoji
+format:
+  revealjs:
+    theme:
+      - default
+      - custom.scss
+    logo: ../00_images/logo_unilu.png
+    footer: | 
+         Masterseminar - Fall Term 2025
+    title-slide-attributes:
+      data-background-image: "../00_images/unilu_building.png"
+      data-background-size: contain
+      data-background-opacity: "0.05"
+    incremental: false
+    smaller: false
+    scrollable: true
+    menu:
+      side: left
+      width: normal
+    preview-links: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    transition: slide
+    background-transition: fade
+    slide-number: true
+---
+
+```{r}
+
+# Load libraries
+library(tidyverse)
+
+# Load COVID data
+covid <- readr::read_csv("simpsons_paradox_covid.csv", show_col_types = FALSE)
+
+# Recode outcome to a binary indicator (1 = death, 0 = survived)
+# This makes it easy to compute "death rates" as means.
+covid <- covid |>
+  mutate(
+    death = if_else(outcome == "death", 1, 0),
+    age_group = factor(age_group, levels = c("under 50", "50 +")),
+    vaccine_status = factor(vaccine_status, levels = c("unvaccinated", "vaccinated"))
+  )
+
+## Death Rate calculation
+overall_ci <- covid |>
+  group_by(vaccine_status) |>
+  summarise(
+    n = n(),
+    deaths = sum(death),
+    rate = deaths / n,
+    se = sqrt(rate * (1 - rate) / n),
+    lo = pmax(rate - 1.96 * se, 0),
+    hi = pmin(rate + 1.96 * se, 1),
+    .groups = "drop"
+  )
+
+# Death Rate by Age Group Calculation
+age_ci <- covid |>
+  group_by(age_group, vaccine_status) |>
+  summarise(
+    n = n(),
+    deaths = sum(death),
+    rate = deaths / n,
+    se = sqrt(rate * (1 - rate) / n),
+    lo = pmax(rate - 1.96 * se, 0),
+    hi = pmin(rate + 1.96 * se, 1),
+    .groups = "drop"
+  )
+
+```
+
+## Bivariate Regression
+
+. . .
+
+- Estimates how **changes in one variable relate to changes in another**
+
+. . .
+
+- **Slope** shows direction and strength of the relationship
+
+. . .
+
+- **Residuals** capture what the model does not explain 
+
+. . .
+
+- **Standard errors** reflect precision of the estimates 
+
+  - Depend on the *association strength*, *variance of $X$*, and *$n$*
+
+. . .
+
+- **p-values** indicate whether the relationship differs from *zero*
+
+## Multiple Regression
+
+
+- Regression does not only serve to **predict** the values of $y$ based on the values of $x$
+
+. . .
+
+- The regression model can be extended with **additional variables**, allowing us to predict the value of $y$ based on the values of $x$ and $z$ <span style="color:grey;">(or additional variables)</span>
+
+. . .
+
+- In doing so, the model estimates the relationship between $x$ and $y$ while **holding** $z$ **constant**
+
+. . .
+
+<div style="font-size:80%; line-height:1.2;">
+
+$$
+Y_i = \alpha + \beta_1 X_{1_i} + \beta_2 X_{2_i}  + ... + \beta_n X_{n_i}   + \varepsilon_i
+$$
+
+</div>
+
+## Why Is It Useful?
+
+<br>
+
+. . .
+
+- **Prediction:** if the goal is to predict the values of $y$, adding more relevant variables can **increase the predictive power** of the model
+
+. . .
+
+- **Causality:** when the goal is to estimate a causal effect (ATE), *holding other variables constant* (i.e., **controlling**) can alleviate **omitted variable bias (OVB)** when such variables are *confounders*
+
+
+# The Simpson Paradox
+
+## UK COVID dataset
+
+
+```{r}
+#| echo: true
+#| results: false
+#| message: false
+#| code-line-numbers: "|1"
+
+# Check the data
+glimpse(covid)
+```
+
+
+::: {.fragment}
+
+
+```{r}
+#| echo: false
+#| results: hold
+#| message: false
+
+# Check the data
+glimpse(covid)
+
+```
+
+:::
+
+<br>
+
+Theoretically, **vaccination** should **reduce death** likelihood
+
+<br>
+
+Source: [OpenIntro](https://www.openintro.org/data/index.php?data=simpsons_paradox_covid)
+
+---
+
+```{r}
+#| echo: true
+#| results: false
+#| message: false
+#| code-line-numbers: "|1"
+#| eval: false
+
+# Barplot
+ggplot(overall_ci, aes(x = vaccine_status, y = rate)) +
+  geom_col() +
+  geom_errorbar(aes(ymin = lo, ymax = hi), width = 0.15) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+  labs(
+    x = "Vaccination status",
+    y = "Death rate (95% CI)",
+    title = "Vaccination and Death Rate"
+  )
+```
+
+::: {.fragment}
+
+```{r}
+#| echo: false
+#| results: false
+#| message: false
+#| eval: true
+
+# Barplot
+ggplot(overall_ci, aes(x = vaccine_status, y = rate)) +
+  geom_col() +
+  geom_errorbar(aes(ymin = lo, ymax = hi), width = 0.15) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+  labs(
+    x = "Vaccination status",
+    y = "Death rate (95% CI)",
+    title = "Vaccination and Death Rate"
+  )
+```
+
+::: 
+
+---
+
+```{r}
+#| echo: true
+#| results: false
+#| message: false
+#| code-line-numbers: "|1"
+#| eval: false
+
+# Barplot
+ggplot(age_ci, aes(x = vaccine_status, y = rate)) +
+  geom_col() +
+  geom_errorbar(aes(ymin = lo, ymax = hi), width = 0.15) +
+  facet_wrap(~ age_group) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+  labs(
+    x = "Vaccination status",
+    y = "Death rate (95% CI)",
+    title = "Disaggregated relationship by age group"
+  )
+```
+
+::: {.fragment}
+
+```{r}
+#| echo: false
+#| results: false
+#| message: false
+#| eval: true
+
+# Barplot
+ggplot(age_ci, aes(x = vaccine_status, y = rate)) +
+  geom_col() +
+  geom_errorbar(aes(ymin = lo, ymax = hi), width = 0.15) +
+  facet_wrap(~ age_group) +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 0.1)) +
+  labs(
+    x = "Vaccination status",
+    y = "Death rate (95% CI)",
+    title = "Disaggregated relationship by age group"
+  )
+```
+
+::: 
+
+
+## Bivariate regression
+
+
+```{r}
+#| echo: true
+#| results: false
+#| message: false
+#| code-line-numbers: "|1"
+
+# Bivariate regression
+m_naive <- lm(death ~ vaccine_status, data = covid)
+summary(m_naive)
+```
+
+
+::: {.fragment}
+
+
+```{r}
+#| echo: false
+#| results: hold
+#| message: false
+
+# Bivariate regression
+m_naive <- lm(death ~ vaccine_status, data = covid)
+summary(m_naive)
+
+```
+
+:::
+
+## Multivariate regression
+
+
+
+```{r}
+#| echo: true
+#| results: false
+#| message: false
+#| code-line-numbers: "|1"
+
+# Multivariate regression
+m_control <- lm(death ~ vaccine_status + age_group, data = covid)
+summary(m_control)
+```
+
+
+::: {.fragment}
+
+
+```{r}
+#| echo: false
+#| results: hold
+#| message: false
+
+# Multivariate regression
+m_control <- lm(death ~ vaccine_status + age_group, data = covid)
+summary(m_control)
+
+```
+
+:::
+
+## The Maths of Multiple Regression
+
+<div style="font-size:80%; line-height:1.2;">
+
+$$
+y = \beta_0 + \beta_1 x + \beta_2 z + \varepsilon
+$$
+</div>
+
+. . .
+
+**Step 1: Auxiliary regression**
+
+
+<div style="font-size:80%; line-height:1.2;">
+
+We first explain $x$ using $z$:
+
+$$
+x = \pi_0 + \pi_1 z + r
+$$
+
+</div>
+
+. . .
+
+**Step 2: Use only the unexplained part of $x$**
+
+<div style="font-size:80%; line-height:1.2;">
+
+We then relate $y$ to this residual:
+
+$$
+y = \alpha_0 + \beta_1 r + u
+$$
+
+</div>
+
+. . .
+
+<div style="font-size:80%; line-height:1.2;">
+
+The coefficient $\beta_1$ here is **exactly the same** as in the multiple regression above
+
+</div>
+
+## Multiple Regression Summary
+
+. . .
+
+- Multiple regression removes from $x$ the variation explained by $z$
+
+. . .
+
+- Adding controls can change coefficients because it changes what variation is used
+
+. . .
+
+- This logic extends to any number of regressors
+
+. . .
+
+- Theory determines what should be controlled for; regression is only the tool
+
+## Regression Assumptions
+
+. . .
+
+<br>
+
+<div style="font-size:45%; line-height:1.2;">
+
+| Assumption | Meaning | Applies to |
+|------------|----------------------|------------|
+| **Linearity in parameters** | The model is linear in the coefficients (not necessarily in the variables) | All regression |
+| **Random sampling** | Observations are independently and identically distributed | All regression |
+| **No perfect multicollinearity** | Regressors are not exact linear combinations of each other | Multiple regression |
+| **Zero conditional mean** | The error term has mean zero conditional on the regressors | All regression |
+| **Homoskedasticity** | The error term has constant variance conditional on the regressors | All regression (for classical SEs) |
+| **No autocorrelation** | Error terms are uncorrelated across observations | All regression (esp. time series) |
+| **Normality of errors** | The error term is normally distributed | All regression (small-sample inference only) |
+| **No measurement error in regressors** | Regressors are measured without error | All regression |
+| **Correct model specification** | No relevant causal variables omitted and no irrelevant variables included | All regression |
+| **Regressors must vary** | Explanatory variables exhibit sufficient variation | All regression |
+| **n > k** | Sample size exceeds number of estimated parameters | All regression |
+| **Conditional independence** | Given controls, the regressor of interest is independent of unobserved determinants of the outcome | Multiple regression (causal interpretation) |
+
+</div>
+
+
+## Advanced Topics
+
+. . .
+
+<br>
+
+<div style="font-size:45%; line-height:1.2;">
+
+| Topic | Brief description |
+|------|-------------------|
+| **Outliers and influential observations** | Identifying observations that disproportionately affect regression estimates |
+| **Nonlinear relationships** | Modeling curvature via transformations of variables (e.g. log, square, exponential) |
+| **Dummy variables** | Including categorical predictors using a reference category |
+| **Fixed effects** | Special case of dummy variables controlling for units (e.g. individuals, countries, years) |
+| **Standardization** | Rescaling variables (e.g. mean 0, standard deviation 1) to ease interpretation and comparison of coefficients |
+| **Interaction terms** | Modeling effects that depend on the value of another variable (two-way or higher-order interactions) |
+| **Robust standard errors** | Inference methods that remain valid under heteroskedasticity or clustered errors |
+| **Binary dependent variables** | Models for yes/no outcomes (linear probability model, logit, probit) |
+| **Categorical dependent variables** | Models for nominal or ordinal outcomes (multinomial logit, ordered logit/probit) |
+| **Generalized Linear Models (GLM)** | Unified framework extending linear regression to non-normal outcomes |
+| **Complex data structures** | Time series, panel data, clustered observations |
+| **Multilevel (hierarchical) models** | Modeling nested data structures with varying effects across levels |
+
+</div>
+
+---
+
+![](questions.png){fig-align="center"}
+
+---
+
+![](volunteer_meme.png){fig-align="center"}
+
+## Choosing Control Variables
+
+. . .
+
+<br>
+
+1️⃣ ***Volunteer***
+
+→ **Explain your RQ** and **draw a DAG** on the board
+
+→  **Propose control variables** to identify the ATE
+
+<br>
+
+. . .
+
+2️⃣ ***Class feedback***
+
+→ Does the **DAG** correctly represent the assumed **causal structure**?  
+
+→ Are the proposed variables **good controls**? 
+
+
+
+## Final session (16:15)
+
+<br>
+
+*→ Conclusion*
+
+<br>
+
+. . .
+
+**Before...**
+
+<br>
+
+Final presentation by **Reachel Klamt & Juan Manuel Herrera García**:
+
+*Plata y plomo: How higher wages expose politicians to criminal violence*
+
+
+## Thanks! :slightly_smiling_face:
+
+<br>
+
+<br>
+
+<br>
+
+<center>[alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)</center>

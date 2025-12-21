@@ -1,0 +1,446 @@
+---
+title: "Theory and Research Design"
+subtitle: "Session 03"
+author: "Research Design and Methods in Quantitative Research"
+institute: "Dr. Álvaro Canalejo-Molero"
+bibliography: ../00_bibliography/rdmqr.bib
+csl: ../00_bibliography/apa.csl
+toc: false
+toc-depth: 1
+number-sections: false
+echo: FALSE
+warning: FALSE
+output: TRUE
+from: markdown+emoji
+format:
+  revealjs:
+    theme:
+      - default
+      - custom.scss
+    logo: ../00_images/logo_unilu.png
+    footer: | 
+         Masterseminar - Fall Term 2025
+    title-slide-attributes:
+      data-background-image: "../00_images/unilu_building.png"
+      data-background-size: contain
+      data-background-opacity: "0.05"
+    incremental: false
+    smaller: false
+    scrollable: true
+    menu:
+      side: left
+      width: normal
+    preview-links: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: false
+    transition: slide
+    background-transition: fade
+    slide-number: true
+---
+
+---
+
+<br>
+
+![](flat_earth.png)
+
+---
+
+
+![](blue_marble.png){fig-align="center"}
+
+## What is a theory?
+
+<br>
+
+. . .
+
+A **tentative conjecture** of how a phenomenon of the world works
+
+<br>
+
+. . .
+
+Either implicitly or explicitly, it conveys a set of **causal relationships** between **concepts**
+
+
+## Some social science examples
+
+<br>
+
+- **Rational Choice Theory** *(Downs)*  
+Individuals vote to maximize utility
+
+- **Partisan Identification Theory** *(Campbell et al.)*  
+Partisanship as a “perceptual screen”  
+
+- **Modernization Theory** *(Lipset)*  
+Economic development fosters democracy  
+
+- **Social Identity Theory** *(Tajfel & Turner)*  
+Group membership shapes leads to group bias
+
+## Good theories should be...
+
+<br>
+
+- **Causal** *(explain why something happen)*
+
+- **Non-normative** *(does not prescribe what ought to happen)*
+
+- **General** *(work across contexts)*
+
+- **Parsimonious** *(explain much with little)*
+
+## From ideas to good theories
+
+*Again, no magic formula!*
+
+<br>
+
+. . .
+
+But some ***strategies***:
+
+- Is it **relevant**? (starting with the RQ)  
+- Is there **interesting variation**? (e.g., puzzles)  
+- Are they **rooted in knowledge of the world** (specific events, local without pronouns)  
+- Do they **build on the literature** (e.g., gaps, extensions, implications)
+
+## From theories to models
+
+<br>
+
+. . .
+
+A **model** is a *simplified* representation of reality
+
+<br>
+
+. . .
+
+> *“All models are wrong, but some are **useful**.”*  
+> — George E. P. Box
+
+---
+
+![](lucerne_transport_map.png)
+
+## When are models useful?
+
+<br>
+
+. . .
+
+In a research design context, models are **useful** because they **bridge the gap between theory and hypotheses**
+
+<br>
+
+. . .
+
+**Models** are a **simplified version of a theory** that focus on specific concepts and relationships
+
+<br>
+
+By removing complexity, they help us make theoretical claims **testable** (and thus falsifiable)  
+
+
+. . .
+
+⟶ *More later on* ***hypotheses***
+
+## Thinking in terms of variables 
+
+
+. . .
+
+<br>
+
+**Variables** are how we represent the **concepts** in our model
+
+<br>
+
+. . .
+
+- **Dependent variable (DV):**  The outcome we want to explain  
+
+- **Independent variable (IV):**  The factor(s) we think explain the DV 
+
+- **Other variables:** Moderators, mediators, confounders...
+
+## Models as variables and relationships
+
+. . .
+
+Examples with **Directed Acyclic Graphs (DAGs)**:
+
+<br>
+
+<div class="fragment">
+$$
+\begin{array}{ll}
+1. & X \longrightarrow Y
+\end{array}
+$$
+</div>
+
+
+<div class="fragment">
+$$
+\begin{array}{ll}
+2. & X \longrightarrow M \longrightarrow Y
+\end{array}
+$$
+</div>
+
+
+<div class="fragment">
+$$
+\begin{array}{ll}
+3. &
+  \begin{array}{ccc}
+     & Z &  \\
+     & \swarrow \searrow &  \\
+    X & \longrightarrow & Y
+  \end{array}
+\end{array}
+$$
+</div>
+
+
+## From models to hypotheses
+
+<br>
+
+. . .
+
+**Models** specify relationships between variables
+
+**Hypotheses** translate those relationships into testable claims
+
+<br>
+
+. . .
+
+**Example:**  
+*Model*: 
+Election results ⟶ Satisfaction with democracy  
+
+*Hypothesis*:  
+Individuals who voted for a party that lost the election  
+will report **lower satisfaction with democracy**.
+
+## Hypotheses
+
+<div style="font-size:80%;">
+
+<br>
+
+<div class="fragment">
+A **hypothesis** is a testable statement about the expected relationship between variables.  
+</div>
+
+<div class="fragment">
+- **Non-directional hypothesis:** only states there is a relationship, not its direction.  
+  - E.g. Income is related to voting turnout.  
+</div>
+
+<div class="fragment">
+- **Directional hypothesis:** specifies the *direction* of the relationship.  
+  - E.g. Higher income increases the likelihood of voting turnout.  
+</div>
+
+<div class="fragment">
+Directional hypotheses can be **positive** (variables move in the same direction) or **negative** (variables move in opposite directions).
+</div>
+
+</div>
+
+## RQs, theory and hypotheses
+
+<br>
+
+::: {.columns}
+
+::: {.column width="30%" .fragment}
+
+<div style="text-align:center;">
+
+Motivating
+
+question  
+
+
+<br>
+
+<svg height="120" width="30" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  <line x1="15" y1="0" x2="15" y2="100" 
+        stroke="black" stroke-width="3" 
+        marker-end="url(#arrowhead)"/>
+</svg>
+
+
+<br>
+
+**Theory**
+
+</div>
+
+:::
+
+::: {.column width="7.5%" .fragment}
+
+<div style="text-align:center;">
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+⟶
+
+</div>
+
+:::
+
+::: {.column width="25%" .fragment}
+
+<div style="text-align:center;">
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+***Model***
+
+</div>
+
+:::
+
+::: {.column width="7.5%" .fragment}
+
+<div style="text-align:center;">
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+⟶
+
+</div>
+
+:::
+
+::: {.column width="30%" .fragment}
+
+<div style="text-align:center;">
+
+Empirical
+
+question  
+
+<br>
+
+<svg height="120" width="30" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="5" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+  <line x1="15" y1="0" x2="15" y2="100" 
+        stroke="black" stroke-width="3" 
+        marker-end="url(#arrowhead)"/>
+</svg>
+ 
+
+<br>
+
+**Hypothesis**
+
+</div>
+
+:::
+
+:::
+
+
+# Conclusion
+
+
+## Theory and research design
+
+<div style="text-align:center;">
+
+![The road to scientific knowledge (Figure 1.1 KW)](fig1.1_kw.png)
+
+</div>
+
+
+## Next session (16:15)
+
+<br>
+
+Data and Measurement
+
+<br>
+
+<br>
+
+. . .
+
+**Before...**
+
+<br>
+
+Presentation by **Laura Rios Quiroz**:
+
+*Heroes and villains: motivated projection of political identities*
+
+---
+
+![](questions.png){fig-align="center"}
+
+## Thanks! :slightly_smiling_face:
+
+<br>
+
+<br>
+
+<br>
+
+<center>[alvaro.canalejo@unilu.ch](alvaro.canalejo@unilu.ch)</center>
+
+
